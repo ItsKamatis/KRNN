@@ -151,7 +151,7 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 ## Contact
 Anru Joshua Colmenar
 
-Rutgers University
+[Rutgers University](https://www.business.rutgers.edu/)
 
 Email: [aj.colmenar@rutgers.edu](mailto:aj.colmenar@rutgers.edu)
 
