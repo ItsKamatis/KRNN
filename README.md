@@ -2,7 +2,7 @@
 
 ## Overview
 
-KRNN Stock Price Prediction is a project that leverages the **K Rare-class Nearest Neighbour Classification (KRNN)** algorithm to predict stock prices using time-series data from the NASDAQ 100. Inspired by the research paper "[KRNN: k Rare-class Nearest Neighbour Classification](#)" by Xiuzhen Zhang et al., this project implements a modified version of Microsoft's Qlib [`pytorch_krnn.py`](https://github.com/microsoft/qlib) to address the challenges of imbalanced classification in financial data.
+KRNN Stock Price Prediction is a project that leverages the **K Rare-class Nearest Neighbour Classification (KRNN)** algorithm to predict stock prices using time-series data from the NASDAQ 100. Inspired by the research paper "[KRNN: k Rare-class Nearest Neighbour Classification](https://www.sciencedirect.com/science/article/abs/pii/S0031320316302369)" by Xiuzhen Zhang et al., this project implements a modified version of Microsoft's Qlib [`pytorch_krnn.py`](https://github.com/microsoft/qlib) to address the challenges of imbalanced classification in financial data.
 
 ## Table of Contents
 
@@ -110,43 +110,48 @@ output:
   logs_dir: "~/.quantlib/data/nasdaq100/logs"   # Directory to save logs
 ```
 ## Results
-Upon running the training script, the following outputs are generated:
-### Model Performance Metrics: MSE, MAE, and R² scores for each fold and their averages.
-### Plots:
-Predictions vs. Actual Values: Visual comparison of model predictions against true values.
-Training and Validation Loss over Epochs: Tracks the loss reduction during training.
+#### Upon running the training script, the following outputs are generated:
+
+***Model Performance Metrics:*** MSE, MAE, and R² scores for each fold and their averages.
+
+***Plots:*** Predictions vs. Actual Values: 
+Visual comparison of model predictions against true values.
+
+***Training and Validation Loss over Epochs:*** Tracks the loss reduction during training.
+
 These results are saved in the directories specified in config.yaml.
 
 ## Credits 
 This project builds upon and is inspired by the following works and tools:
 
-### Microsoft Qlib: 
+***Microsoft Qlib:*** 
 Utilized the pytorch_krnn.py implementation for KRNN.
 
-### Research Paper: 
-Inspired by the paper:
+***Research Paper:*** Inspired by the paper:
 
 #### KRNN: k Rare-class Nearest Neighbour Classification
 
 Xiuzhen Zhang, Yuxuan Li, Ramamohanarao Kotagiri, Lifang Wu, Zahir Tari, Mohamed Cheriet
 
-#### Affiliations:
+****Affiliations:****
 
 RMIT University, Australia
 The University of Melbourne, Australia
 Beijing University of Technology, PR China
 The University of Quebec (ETS), Canada
-#### Abstract:
+****Abstract:****
 
 Imbalanced classification is a challenging problem. Re-sampling and cost-sensitive learning are global strategies for generality-oriented algorithms such as the decision tree, targeting inter-class imbalance. We research local strategies for the specificity-oriented learning algorithms like the k Nearest Neighbour (KNN) to address the within-class imbalance issue of positive data sparsity. We propose an algorithm k Rare-class Nearest Neighbour, or KRNN, by directly adjusting the induction bias of KNN. We propose to form dynamic query neighbourhoods, and to further adjust the positive posterior probability estimation to bias classification towards the rare class. We conducted extensive experiments on thirty real-world and artificial datasets to evaluate the performance of KRNN. Our experiments showed that KRNN significantly improved KNN for classification of the rare class, and often outperformed re-sampling and cost-sensitive learning strategies with generality-oriented base learners.
 
 ChatGPT (OpenAI): Leveraged various versions (o1-preview, o1-mini, and 4) for code development and project guidance.
 
 ## License 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/ItsKamatis/QuantLIB/blob/master/LICENSE) file for details.
 
 ## Contact 
 Anru Joshua Colmenar
+
 Rutgers University
-Email: aj.colmenar@rutgers.edu
+
+Email: [aj.colmenar@rutgers.edu](email:aj.colmenar@rutgers.edu)
 
