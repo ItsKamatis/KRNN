@@ -1,0 +1,40 @@
+# config.yaml
+
+# Data parameters
+data:
+  processed_data_dir: "~/.quantlib/data/nasdaq100/processed_data/"
+  seq_len: 10            # Restore original sequence length
+  batch_size: 32         # Adjust as needed
+  test_size: 0.2
+  valid_size: 0.1
+  features_to_use: null  # Use all features if None
+  target_column: "Close"
+  n_splits: 5            # Increase cross-validation folds for robustness
+
+# Model parameters
+model:
+  fea_dim: null         # Will be set dynamically based on the data
+  cnn_dim: 256           # Restore original model complexity
+  cnn_kernel_size: 3
+  rnn_dim: 256
+  rnn_dups: 3
+  rnn_layers: 2
+  dropout: 0.5
+
+# Training parameters
+training:
+  n_epochs: 100         # Restore original number of epochs
+  lr: 0.0005
+  early_stop: 15        # Restore early stopping patience
+  loss: "mse"
+  optimizer: "adam"
+  seed: 42
+
+# Device configuration
+device:
+  GPU: 0               # Use GPU if available; set to -1 for CPU
+
+# Output paths
+output:
+  model_save_path: "krnn_model.pth"
+  plots_dir: "plots"    # Directory to save plots
