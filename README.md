@@ -139,6 +139,9 @@ License
 This project is licensed under the MIT License.
 
 Contact
+
 Anru Joshua Colmenar
+
 Rutgers University
-Email: anrucolmenar@gmail.com
+
+Email: aj.colmenar@rutgers.edu
