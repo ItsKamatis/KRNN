@@ -58,12 +58,12 @@ Copy code
 python train.py
 The script will perform cross-validation, train the KRNN model, evaluate its performance, and save the resulting plots.
 
-Configuration
+## Configuration
 The project is configured via the config.yaml file. Below is an overview of the key parameters:
 
 yaml
 Copy code
-# config.yaml
+config.yaml
 
 # Data parameters
 data:
@@ -104,7 +104,7 @@ output:
   model_save_path: "krnn_model.pth"             # Path to save the trained model
   plots_dir: "~/.quantlib/data/nasdaq100/plots" # Directory to save plots
   logs_dir: "~/.quantlib/data/nasdaq100/logs"   # Directory to save logs
-Results
+## Results
 Upon running the training script, the following outputs are generated:
 
 Model Performance Metrics: MSE, MAE, and R² scores for each fold and their averages.
@@ -113,7 +113,7 @@ Predictions vs. Actual Values: Visual comparison of model predictions against tr
 Training and Validation Loss over Epochs: Tracks the loss reduction during training.
 These results are saved in the directories specified in config.yaml.
 
-Credits
+## Credits
 This project builds upon and is inspired by the following works and tools:
 
 Microsoft Qlib: Utilized the pytorch_krnn.py implementation for KRNN.
@@ -135,10 +135,10 @@ Imbalanced classification is a challenging problem. Re-sampling and cost-sensiti
 
 ChatGPT (OpenAI): Leveraged various versions (o1-preview, o1-mini, and 4) for code development and project guidance.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Contact
+## Contact
 
 Anru Joshua Colmenar
 
