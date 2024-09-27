@@ -148,10 +148,10 @@ ChatGPT (OpenAI): Leveraged various versions (o1-preview, o1-mini, and 4) for co
 ## License 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/ItsKamatis/QuantLIB/blob/master/LICENSE) file for details.
 
-## Contact 
+## Contact
 Anru Joshua Colmenar
 
 Rutgers University
 
-Email: [aj.colmenar@rutgers.edu](email:aj.colmenar@rutgers.edu)
+Email: [aj.colmenar@rutgers.edu](mailto:aj.colmenar@rutgers.edu)
 
