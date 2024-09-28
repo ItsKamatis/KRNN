@@ -1,7 +1,7 @@
 # tests/test_data_processing.py
 
 import unittest
-from train import create_sequences
+from src.train import create_sequences
 
 class TestDataProcessing(unittest.TestCase):
     def test_create_sequences(self):

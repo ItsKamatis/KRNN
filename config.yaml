@@ -1,40 +1,96 @@
 # config.yaml
 
-# Data parameters
+# ===============================
+# Data Configuration
+# ===============================
 data:
-  processed_data_dir: "~/.quantlib/data/nasdaq100/processed_data/"
-  seq_len: 10            # Sequence length
-  batch_size: 32         # Batch size
-  test_size: 0.2         # Fraction of data for testing
-  valid_size: 0.1        # Fraction of training data for validation
-  features_to_use: null  # List of features to use; null means use all
-  target_column: "Close" # Target variable for prediction
-  n_splits: 5            # Number of cross-validation splits
+  # Directory containing processed CSV files for NASDAQ 100 stocks
+  processed_data_dir: "C:/Users/colme/.quantlib/data/nasdaq100/processed_data/"
 
-# Model parameters
+  # Sequence length for time series data
+  seq_len: 10
+
+  # List of feature column names to use; set to null to use all available features except 'Date' and 'Target'
+  features_to_use: null  # Example: ["Open", "High", "Low", "Close", "Volume"]
+
+  # Name of the target column to predict
+  target_column: "Close"
+
+  # Number of splits for TimeSeriesSplit cross-validation
+  n_splits: 5
+
+  # Proportion of training data to use for validation within each fold
+  valid_size: 0.1
+
+# ===============================
+# Model Configuration
+# ===============================
 model:
-  fea_dim: null         # Will be set dynamically based on the data
-  cnn_dim: 256          # CNN layer dimensions
-  cnn_kernel_size: 3    # CNN kernel size
-  rnn_dim: 256          # RNN layer dimensions
-  rnn_dups: 3           # Number of parallel RNNs
-  rnn_layers: 2         # Number of RNN layers
-  dropout: 0.5          # Dropout rate
+  # Feature dimension (number of input features); dynamically set based on data
+  fea_dim: 24
 
-# Training parameters
+  # Number of output channels for the CNN layer
+  cnn_dim: 128  # Increased from 64 to leverage more GPU memory
+
+  # Kernel size for the CNN layer
+  cnn_kernel_size: 3
+
+  # Hidden dimension for the RNN layer
+  rnn_dim: 128  # Increased from 64 to leverage more GPU memory
+
+  # Number of duplicate RNN layers (if applicable)
+  rnn_dups: 3
+
+  # Number of stacked RNN layers
+  rnn_layers: 2
+
+  # Dropout rate to prevent overfitting
+  dropout: 0.2
+
+# ===============================
+# Training Configuration
+# ===============================
 training:
-  n_epochs: 100         # Number of training epochs
-  lr: 0.0005            # Learning rate
-  early_stop: 15        # Early stopping patience
-  loss: "mse"           # Loss function
-  optimizer: "adam"     # Optimizer
-  seed: 42              # Random seed for reproducibility
+  # Total number of training epochs
+  n_epochs: 200
 
-# Device configuration
+  # Learning rate for the optimizer
+  lr: 0.001
+
+  # Early stopping patience (number of epochs with no improvement after which training will be stopped)
+  early_stop: 20
+
+  # Loss function to optimize
+  loss: "mse"  # Options: "mse", "mae", etc.
+
+  # Optimizer to use
+  optimizer: "adam"  # Options: "adam", "sgd", etc.
+
+  # Batch size for training
+  batch_size: 128  # Increased from 32 to utilize more GPU memory
+
+  # Number of worker subprocesses for data loading
+  num_workers: 12  # Set based on CPU cores
+
+  # Random seed for reproducibility
+  seed: 42
+
+# ===============================
+# Device Configuration
+# ===============================
 device:
-  GPU: 0                # GPU ID to use; set to -1 for CPU
+  # GPU index to use (set to -1 to use CPU)
+  GPU: 0
 
-# Output paths
+# ===============================
+# Output Configuration
+# ===============================
 output:
-  model_save_path: "krnn_model.pth"             # Path to save the trained model
-  plots_dir: "~/.quantlib/data/nasdaq100/plots" # Directory to save plots
+  # Directory to save log files
+  logs_dir: "logs"
+
+  # Directory to save generated plots
+  plots_dir: "C:/Users/colme/.quantlib/data/nasdaq100/plots"
+
+  # Directory to save trained model checkpoints
+  models_dir: "models"
