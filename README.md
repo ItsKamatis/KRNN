@@ -133,13 +133,6 @@ Utilized the pytorch_krnn.py implementation for KRNN.
 
 Xiuzhen Zhang, Yuxuan Li, Ramamohanarao Kotagiri, Lifang Wu, Zahir Tari, Mohamed Cheriet
 
-****Affiliations:****
-
-RMIT University, Australia
-The University of Melbourne, Australia
-Beijing University of Technology, PR China
-The University of Quebec (ETS), Canada
-
 ****Abstract:****
 
 Imbalanced classification is a challenging problem. Re-sampling and cost-sensitive learning are global strategies for generality-oriented algorithms such as the decision tree, targeting inter-class imbalance. We research local strategies for the specificity-oriented learning algorithms like the k Nearest Neighbour (KNN) to address the within-class imbalance issue of positive data sparsity. We propose an algorithm k Rare-class Nearest Neighbour, or KRNN, by directly adjusting the induction bias of KNN. We propose to form dynamic query neighbourhoods, and to further adjust the positive posterior probability estimation to bias classification towards the rare class. We conducted extensive experiments on thirty real-world and artificial datasets to evaluate the performance of KRNN. Our experiments showed that KRNN significantly improved KNN for classification of the rare class, and often outperformed re-sampling and cost-sensitive learning strategies with generality-oriented base learners.
