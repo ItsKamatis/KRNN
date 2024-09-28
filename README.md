@@ -123,14 +123,13 @@ These results are saved in the directories specified in config.yaml.
 
 #### My Results:
 
-High R² Scores in Folds 2, 3, and 5:
-
+****High R² Scores in Folds 2, 3, and 5:****
 R² Scores: Close to 1, indicating that the model explains almost all the variability in the target variable.
-Moderate Performance in Folds 1 and 4:
 
+****Moderate Performance in Folds 1 and 4:****
 R² Scores: 0.636257 (Fold 1) and 0.819704 (Fold 4), which are significantly lower than the other folds.
-Consistency in the Number of Test Samples Across Folds:
 
+****Consistency in the Number of Test Samples Across Folds:****
 Each fold has 23,459 test samples, ensuring uniform evaluation.
 
 ## Credits 
