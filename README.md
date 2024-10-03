@@ -123,6 +123,17 @@ Visual comparison of model predictions against true values.
 
 These results are saved in the directories specified in config.yaml.
 
+#### My Results:
+
+****High R² Scores in Folds 2, 3, and 5:****
+R² Scores: Close to 1, indicating that the model explains almost all the variability in the target variable.
+
+****Moderate Performance in Folds 1 and 4:****
+R² Scores: 0.636257 (Fold 1) and 0.819704 (Fold 4), which are significantly lower than the other folds.
+
+****Consistency in the Number of Test Samples Across Folds:****
+Each fold has 23,459 test samples, ensuring uniform evaluation.
+
 ## Credits 
 This project builds upon and is inspired by the following works and tools:
 
@@ -134,13 +145,6 @@ Utilized the pytorch_krnn.py implementation for KRNN.
 ##### KRNN: k Rare-class Nearest Neighbour Classification
 
 Xiuzhen Zhang, Yuxuan Li, Ramamohanarao Kotagiri, Lifang Wu, Zahir Tari, Mohamed Cheriet
-
-****Affiliations:****
-
-RMIT University, Australia
-The University of Melbourne, Australia
-Beijing University of Technology, PR China
-The University of Quebec (ETS), Canada
 
 ****Abstract:****
 
