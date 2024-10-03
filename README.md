@@ -3,7 +3,9 @@
 ## Overview
 
 KRNN Stock Price Prediction is a project that leverages the **K Rare-class Nearest Neighbour Classification (KRNN)** algorithm to predict stock prices using time-series data from the NASDAQ 100. Inspired by the research paper "[KRNN: k Rare-class Nearest Neighbour Classification](https://www.sciencedirect.com/science/article/abs/pii/S0031320316302369)" by Xiuzhen Zhang et al., this project implements a modified version of Microsoft's Qlib [`pytorch_krnn.py`](https://github.com/microsoft/qlib) to address the challenges of imbalanced classification in financial data.
-
+### THIS VERSION IS NOW OUTDATED AND INCOMPLETE. 
+Since last update a new and improved version of the project has been under 
+construction. The new version is currently under testing and will be released. 
 ## Table of Contents
 
 - [Overview](#overview)
